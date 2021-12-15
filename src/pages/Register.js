@@ -28,7 +28,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
-        if (json.code == 200) {
+        if (json.code === 200) {
           if (json.msg) throw new Error(json.msg);
           else if (json.id) {
             navigate(`/login`);
